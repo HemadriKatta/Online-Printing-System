@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Printing System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#"><img src="img/logo.jpg" width="200px" height="50px" class="logo" alt=""></a>
+            <i class='bx bx-shopping-bag' id="cart-icon" ></i>
+            <div class="cart">
+                <h2 class="cart-title">Cart</h2>
+                <div class="cart-content">
+                    <!--
+                    <div class="cart-box">
+                    
+                        <img src="img/products/ai/Ai 1.jpeg" alt="" class="cart-img">
+                        <div class="detail-box">
+                            <div class="cart-product-title">Articial Intelligence 1</div>
+                            <label for="size">Size:</label>
+                            <select class="size">
+                                <option value="small">12x15</option>
+                                <option value="medium">16x20</option>
+                                <option value="large">20x24</option>
+                            </select>
+                            <label for="material">Material:</label>
+                            <select class="material">
+                                <option value="coated">Coated</option>
+                                <option value="uncoated">Uncoated</option>
+                                <option value="glossy">Glossy</option>
+                                <option value="matte">Matte</option>
+                            </select>
+                            <div class="cart-price">₹99</div>
+                            <input type="number" value="1" class="cart-quantity">
+                        </div>
+                        <i class='bx bxs-trash-alt cart-remove' ></i>
+                       
+                    </div>
+                    -->
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">₹0</div>
+                </div>
+                <button type="button" class="btn-buy">Buy Now</button>
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <h2 class="section-title">Shop Designs</h2>
+        <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search for designs...">
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="img/products/ai/Ai 1.jpeg" class="product-img">
+                <h2 class="product-title">Artificial intelligence 1</h2>   
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/ai/AI 2.jpeg" class="product-img">
+                <h2 class="product-title">Artificial intelligence 2</h2>
+                
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/ai/AI 3.jpeg" class="product-img">
+                <h2 class="product-title">Artificial intelligence 3</h2>
+                <span class="price">₹119</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/data/d1.jpeg" class="product-img">
+                <h2 class="product-title">Data Science 1</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/data/d2.jpeg" class="product-img">
+                <h2 class="product-title">Data Science 2</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/data/d3.jpeg" class="product-img">
+                <h2 class="product-title">Data Science 3</h2>
+                <span class="price">₹119</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cloud/c1.jpg" class="product-img">
+                <h2 class="product-title">Cloud Computing 1</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cloud/c2.jpeg" class="product-img">
+                <h2 class="product-title">Cloud Computong 2</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cloud/aws.webp" class="product-img">
+                <h2 class="product-title">Coloud Computing - AWS</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cloud/gcp.jpg" class="product-img">
+                <h2 class="product-title">Cloud Computing - GCP</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cloud/azure.png" class="product-img">
+                <h2 class="product-title">Cloud Computing - Azure</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cyber/c1.jpeg" class="product-img">
+                <h2 class="product-title">Cyber Security 1</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cyber/c2.jpeg" class="product-img">
+                <h2 class="product-title">Cyber Security 2</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cyber/c3.jpeg" class="product-img">
+                <h2 class="product-title">Cyber Security 3</h2>
+                <span class="price">₹119</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/iot/i1.png" class="product-img">
+                <h2 class="product-title">Internet Of Things 1</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/iot/i2.jpeg" class="product-img">
+                <h2 class="product-title">Internet of Things 2</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/ganesha.jpeg" class="product-img">
+                <h2 class="product-title">Ganesha</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/krishna.jpeg" class="product-img">
+                <h2 class="product-title">Krishna</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/rama.jpeg" class="product-img">
+                <h2 class="product-title">Rama</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/shiva.jpeg" class="product-img">
+                <h2 class="product-title">Shiva</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/vishnu.jpeg" class="product-img">
+                <h2 class="product-title">Vishnu</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/allah.jpeg" class="product-img">
+                <h2 class="product-title">Allah</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/god/jesus.jpeg" class="product-img">
+                <h2 class="product-title">Jesus</h2>
+                <span class="price">₹99</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/wonders/w1.webp" class="product-img">
+                <h2 class="product-title">Machu Picchu/h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/wonders/w2.webp" class="product-img">
+                <h2 class="product-title">Chichén Itzá</h2>   
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/wonders/w3.webp" class="product-img">
+                <h2 class="product-title">Colosseum</h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>       
+            <div class="product-box">
+                <img src="img/products/wonders/w4.webp" class="product-img">
+                <h2 class="product-title">Petra</h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/wonders/w5.webp" class="product-img">
+                <h2 class="product-title">Great Wall of China</h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/wonders/w6.webp" class="product-img">
+                <h2 class="product-title">Christ the Redeemer</h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/wonders/w7.webp" class="product-img">
+                <h2 class="product-title">Taj Mahal/h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/birthday 1.jpeg" class="product-img">
+                <h2 class="product-title">Birthday 1</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/birthday.jpeg" class="product-img">
+                <h2 class="product-title">Birthday 2</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cartoons/sinchan.webp" class="product-img">
+                <h2 class="product-title">Sinchan Cartoon</h2>
+                <span class="price">₹89</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cartoons/Doremon.webp" class="product-img">
+                <h2 class="product-title">Doremon Cartoon</h2>
+                <span class="price">₹89</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cartoons/Dora.webp" class="product-img">
+                <h2 class="product-title">Dora cartoon</h2>
+                <span class="price">₹79</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cartoons/Ninja.webp" class="product-img">
+                <h2 class="product-title">Ninja Hatori cartoon</h2>
+                <span class="price">₹89</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/cartoons/oggy.webp" class="product-img">
+                <h2 class="product-title">Oggy cartoon</h2>
+                <span class="price">₹89</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/BMW.webp" class="product-img">
+                <h2 class="product-title">BMW Car</h2>
+                <span class="price">₹119</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/Audi.webp" class="product-img">
+                <h2 class="product-title">Audi Car</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/lamborghini.webp" class="product-img">
+                <h2 class="product-title">Lamborghini Car</h2>
+                <span class="price">₹129</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/porsche.webp" class="product-img">
+                <h2 class="product-title">Porsche Car</h2>
+                <span class="price">₹139</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/BMW -Bike.webp" class="product-img">
+                <h2 class="product-title">BMW bike</h2>
+                <span class="price">₹129</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/Ducati.webp" class="product-img">
+                <h2 class="product-title">Ducati Bike</h2>
+                <span class="price">₹129</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/Ktm.webp" class="product-img">
+                <h2 class="product-title">KTM Bike</h2>
+                <span class="price">₹139</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/motor/Rf.webp" class="product-img">
+                <h2 class="product-title">Royal Enfield Bike</h2>
+                <span class="price">₹109</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/mern.webp" class="product-img">
+                <h2 class="product-title">MERN Stack - Web Development</h2>
+                <span class="price">₹159</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/Full Stack.webp" class="product-img">
+                <h2 class="product-title">Full Stack Development</h2>
+                <span class="price">₹159</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/lion.webp" class="product-img">
+                <h2 class="product-title">Lion</h2>
+                <span class="price">₹129</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/tiger.webp" class="product-img">
+                <h2 class="product-title">Tiger</h2>
+                <span class="price">₹139</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/flowers 1.webp" class="product-img">
+                <h2 class="product-title">Flowers</h2>
+                <span class="price">₹129</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/Rose flower.webp" class="product-img">
+                <h2 class="product-title">Rose Flowers</h2>
+                <span class="price">₹129</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/Bird 2.webp" class="product-img">
+                <h2 class="product-title">Beautifull Birds</h2>
+                <span class="price">₹159</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/bird.webp" class="product-img">
+                <h2 class="product-title">Bird</h2>
+                <span class="price">₹149</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+            <div class="product-box">
+                <img src="img/products/butterflies.webp" class="product-img">
+                <h2 class="product-title">Butterflies</h2>
+                <span class="price">₹179</span>
+                <i class='bx bx-shopping-bag add-cart' ></i>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="pagination-box">
+        <div class="pagination">
+            
+        </div>
+    </section>
+
+
+    
+    
+
+    <section class="containers">
+        <div class="upload-container">
+            <h2 class="section-title">Custom Designs</h2>
+            <input class="upload-input" type="file" accept="image/*" onchange="loadFile(event)">
+            <br><br>
+            <h2 class="upload-title">Uploaded Design</h2>
+            <p><img id="upload-output" class="upload-img" width="220" ></p>
+            <span class="price">₹49</span>
+            <br>
+            <i class='bx bx-shopping-bag add-cart' id="upload-cart" ></i>
+        </div>
+        <div class="upload-container">
+            <h3 class="section-title">Pricing Structure</h1>
+            <h3 > Size:</h3>
+            <br>
+            <h4 class="prices">12x15 : 200</h4>
+            <h4 class="prices">16x20 : 350</h4>
+            <h4 class="prices">20x24 : 500</h4>
+            <br><br>
+            <h3> Material Type:</h3>
+            <br>
+            <h4 class="prices">Uncoated  : 50</h4>
+            <h4 class="prices">Coated    : 100</h4>
+            <h4 class="prices">Matte     : 150</h4>
+            <h4 class="prices">Glossy    : 150</h4>
+            <br><br>
+            <h4 class="prices">Note: Printing Charges(only for uploaded design) is ₹49</h4>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
